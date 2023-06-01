@@ -135,7 +135,7 @@ resource "aws_instance" "dev_instance" {
     instance_type = var.dev_instance
     key_name =var.key_name
     vpc_security_group_ids = [aws_security_group.sg.id]
-    ##user_data = file("./jenkins.sh")
+    
     tags = {
         Name=var.vpc_name[0]
     }
@@ -273,7 +273,7 @@ resource "aws_instance" "dev_instance2" {
     instance_type = var.dev_instance
     key_name =var.key_name
     vpc_security_group_ids = [aws_security_group.sg2.id]
-    user_data = file("./jenkins.sh")
+  
     tags = {
         Name=var.vpc_name[1]
         
